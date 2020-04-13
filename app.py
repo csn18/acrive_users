@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, request
 import requests
 
@@ -62,4 +64,4 @@ def get_user_data():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=os.getenv('PORT'))
